@@ -1,0 +1,328 @@
+<?php
+if(isset($_POST['submit']))
+{
+
+/*
+  print_r('Nome: '. $_POST['nome']);
+ print_r('<br>');
+  print_r('Email: '. $_POST['email']);
+  print_r('<br>');
+  print_r('Senha: '. $_POST['senha']);
+  print_r('<br>');
+   print_r('Celular: '. $_POST['celular']);
+   print_r('<br>');
+  
+ */
+ 
+  include_once('config.php');
+  $nome = $_POST ['nome'];
+  $email = $_POST['email'];
+  $senha = $_POST['senha'];
+  $celular = $_POST['celular'];
+
+
+
+  
+    $reset = mysqli_query($conexao, "INSERT INTO contato
+    (nome,email,senha,celular)
+     VALUES ('$nome','$email','$senha','$celular')");
+
+header('Location:logins.php');
+}
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wesley Santos</title>
+    <link rel="shortcut icon" href="images/meuperfil.png"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                facebook: "100036754243412", // Facebook page ID
+                whatsapp: "+5511988574097", // WhatsApp number
+                call_to_action: "Falar com Wesley", // Call to action
+                button_color: "#129BF4", // Color of button
+                position: "right", // Position may be 'right' or 'left'
+                order: "whatsapp,facebook", // Order of buttons
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+      </script>
+      
+
+</head>
+<body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="wesley.png"><a href="#"></a>
+                <img src="wesley.png" alt="Wesley" width="150px">
+                <span></span></a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#about" class="menu-btn">Sobre mim</a></li>
+                <li><a href="#services" class="menu-btn">Serviços</a></li>
+                <li><a href="#skills" class="menu-btn">Skills</a></li>
+                <li><a href="formularios.php" class="menu-btn">Formulário de Contato</a></li>
+                <li><a href="#teams" class="menu-btn">Projetos</a></li>
+                <li><a href="#contact" class="menu-btn">Contate-me</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                facebook: "100036754243412", // Facebook page ID
+                whatsapp: "+5511988574097", // WhatsApp number
+                call_to_action: "Falar com Wesley", // Call to action
+                button_color: "#129BF4", // Color of button
+                position: "right", // Position may be 'right' or 'left'
+                order: "whatsapp,facebook", // Order of buttons
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+      </script>
+   
+    <!-- home section start -->
+    <section class="home" id="home">
+      <div class="max-width">
+          <div class="row">
+            <div class="home-content">
+                <div class="text-1">Olá, meu nome é</div>
+                <div class="text-2">Wesley</div>
+                <div class="text-3"><span class="typing"></span></div>
+                <a href="https://www.linkedin.com/in/wesley-bento-dos-santos-9b66a3128/" target="_blank">Me encontre</a>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- about section start -->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">Sobre mim</h2>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="eu.png" alt="wesley">
+                </div>
+                <div class="column right">
+                    <div class="text">Eu sou Wesley</div>
+                    <p>Sou Sergipando, natural da cidade de Estância/SE. Atualmente moro em São Paulo, SP. Sou estudante de Engenhraia da Computação pelo o Centro Universitario Internacional Uninter . Adentrei no mundo da tecnologia trabalhando como estagiario de Analise e desenvolvimentento de sistemas na EMTU , eedito imobiliario do Itáu Unibanco.  Apaixonado por criar e compartilhar conteúdo de programação, sou muito curioso e gosto de estudar e aprender sempre. Estou iniciando no mundo freelancer e se você quiser saber mais sobre minhas historia profissional basta apenas fazer o download do meu curriculo abaixo.</p>
+                    <a href="Wesley.pdf" target="_blank">Baixe meu currículo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- services section start -->
+    <section class="services" id="services">
+        <div class="max-width">
+            <h2 class="title">Meus Serviços</h2>
+            <div class="serv-content">
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-bug"></i>
+                        <div class="text">Formatação</div>
+                        <p>Formatação de computadores e Instalação de software. </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-code"></i>
+                        <div class="text">Criação de Sites</div>
+                        <p> Desenho e toda a construção pagina do sites.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-tools"></i>
+                        <div class="text">Manuntenções</div>
+                        <p>Manutenção e implementação de novas funcionalidade de sites</p>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </section>
+   
+    
+    <section class="skills" id="skills">
+        <div class="max-width">
+            <h2 class="title">Minhas Skills</h2>
+            <div class="skills-content">
+            
+                <div class="column right">
+                    <div class="bars">
+                        <div class="info">
+                            <span>HTML</span>
+                            <span>1 ano</span>
+                        </div>
+                        <div class="line html"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>CSS</span>
+                            <span>1 ano</span>
+                        </div>
+                        <div class="line css"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Github</span>
+                            <span>1 ano</span>
+                        </div>
+                        <div class="line github"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>MySQL- Sever</span>
+                            <span>6 meses</span>
+                        </div>
+                        <div class="line mysql"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>JavaScript</span>
+                            <span>8 meses</span>
+                        </div>
+                        <div class="line js"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- teams section start -->
+    <section class="teams" id="teams">
+        <div class="max-width">
+            <h2 class="title">Meus Projetos</h2>
+            <div class="carousel owl-carousel">
+                <div class="card">
+                    <div class="box">
+                        <a href="https://github.com/WS-Engenheiro" target="_blank"><img src="images/github-white.png" alt=""></a>
+                        <div class="text">Meu Github</div>
+                        <p>Todos os meus projetos você encontra aqui.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <a href="https://www.techtudo.com.br/listas/2017/11/redes-sociais-apps-e-sites-para-encontrar-cuidadores-de-caes-e-gatos.ghtml" target="_blank"><img src="images/cachorro-com-gases3.jpg" alt=""></a>
+                        <div class="text">kD Meu Bichinho?</div>
+                        <p>Website que ajuda a encontrar seu pet perdido</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <a href="http://www.uniaoreciclaveis.com.br/" target="_blank"><img src="images/ecoleta.jpg" alt=""></a>
+                        <div class="text">Ecoleta</div>
+                        <p>Ecosistema de coleta de Lixo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section start -->
+    <section class="contact" id="contact">
+        
+        <div class="max-width">
+            <h2 class="title">Contate-me</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Entre em contato comigo</div>
+                    <p>Se você quiser entrar em contato comigo e saber um pouco mais de mim e do que eu faço, me envia uma mensagem. Eu vou adorar!</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Nome</div>
+                                <div class="sub-title">Wesley Santos</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">&nbsp;Endereço</div>
+                                <div class="sub-title">&nbsp;São Paulo, SP - Brasil</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">wesleydesenvolvedorweb@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Inscreva-se!</div>
+                    <form action="index.php" method="post">
+                 
+
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" class="name" id="nome" name="nome" placeholder="Nome" value="" autocomplete="off" value="" required="required" data-mask-reverse="true">
+                            </div>
+                            <div class="field email">
+                                <input type="email" class="email-input" name="email" id="email" placeholder="Email"value="" autocomplete="off" value="" required="required" data-mask-reverse="true">
+                            </div>
+                            <div class="field senha">
+                                <input type="password" class="senha" id="senha" name="senha" placeholder="Senha" value="" autocomplete="off" value="" required="required" data-mask-reverse="true">
+                            </div>
+                            <div class="field tel">
+                                <input type="tel" maxlength="12" class="tel" name="celular" id="tel" placeholder="Celular"placeholder="00 0 0000-0000" data-mask="00 0 0000-0000" autocomplete="off" value="" required="required" data-mask-reverse="true">
+                            </div>
+
+                        <div class="button-area">
+                            <button class="send-msg" type="submit" name="submit" onclick="Enviar()">Enviar</button>
+                        </div>
+                </form> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section start -->
+    <footer class="main center">
+        <div class="icon center">
+            <a class="fab fa-linkedin fa-2x" href="https://www.linkedin.com/in/wesley-bento-dos-santos-9b66a3128/" target="_blank"></a>
+        </div>
+        <div class="icon center">
+            <a class="fab fa-github fa-2x" href="https://github.com/WS-Engenheiro" target="_blank"></a>
+        </div>
+        <div class="icon center">
+            <i><a class="fab fa-instagram fa-2x" href="https://www.instagram.com/wsdesenvolvedor/" target="_blank"></a></i>
+        </div>
+        <h3>Wesley Santos
+            <script type="text/javascript">document.write(new Date().getFullYear());</script> &copy;</a> Feito com <span class="love">♥</span></span>
+        </h3>
+    </footer>
+    <script src="https://kit.fontawesome.com/b37b8b8e5b.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+</body>
+</html>
