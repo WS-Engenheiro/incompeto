@@ -1,35 +1,4 @@
-<?php
-if(isset($_POST['submit']))
-{
 
-/*
-  print_r('Nome: '. $_POST['nome']);
- print_r('<br>');
-  print_r('Email: '. $_POST['email']);
-  print_r('<br>');
-  print_r('Senha: '. $_POST['senha']);
-  print_r('<br>');
-   print_r('Celular: '. $_POST['celular']);
-   print_r('<br>');
-  
- */
- 
-  include_once('config.php');
-  $nome = $_POST ['nome'];
-  $email = $_POST['email'];
-  $senha = $_POST['senha'];
-  $celular = $_POST['celular'];
-
-
-
-  
-    $reset = mysqli_query($conexao, "INSERT INTO contato
-    (nome,email,senha,celular)
-     VALUES ('$nome','$email','$senha','$celular')");
-
-header('Location:logins.php');
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
